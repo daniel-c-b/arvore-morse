@@ -47,4 +47,13 @@ class ArvoreBinariaMorse {
 		
 		return frase;
 	}
+	
+	void exibir(Nodo noAtual, int profundidade) {
+		if (noAtual == null) {
+			return;
+		}
+		System.out.println("   ".repeat(profundidade) + "(" + profundidade + ") " + noAtual.caractere);
+		exibir(noAtual.filhoEsquerdo, profundidade + 1);
+		exibir(noAtual.filhoDireito, profundidade + 1);
+	}
 }
